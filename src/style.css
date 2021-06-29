@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@font-face {
+    font-family: Tesla;
+    src: url(../static/assets/fonts/TESLA.ttf) format("truetype");
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    user-select: none;
+}
+
+html,
+body
+{
+    overflow: hidden;
+    cursor: grab; 
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+body:active {
+    cursor: grabbing;
+}
+
+.colors {
+    position: absolute;
+    height: 50px;
+    width: 250px;
+    margin: auto;
+    top: 15px;
+    right: 0;left: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(98, 98, 98, 0.2);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-radius: 9999px;
+}
+
+.color {
+    margin: auto;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.color.selected {
+    border: 2px solid rgb(0, 136, 255);
+}
+
+.white {
+    background: linear-gradient(135deg, #fff, rgb(150, 150, 150));
+}
+.red {
+    background: linear-gradient(135deg, #f00, rgb(150, 0, 0));
+}
+.blue {
+    background: linear-gradient(135deg, #00f, rgb(0, 0, 150));
+}
+.grey {
+    background: linear-gradient(135deg, #777, #444);
+}
+.black {
+    background: linear-gradient(135deg, #555, #000);
+}
+
+.info-icon {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+}
+
+.info-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.info {
+    display: none;
+    height: fit-content;
+    max-width: 30pc;
+    position: absolute;
+    margin: auto;
+    top: 0;bottom: 0;left: 0;right: 0;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    background: rgba(98, 98, 98, 0.7);
+    padding: 20px;
+}
+.info.open {
+    display: block;
+}
+
+.info ul {
+    padding: 20px;
+}
+
+.info ul li {
+    padding: 4px 0;
+}
+
+.info b u {
+    cursor: pointer;
+}
+
+.zoom-slider {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; 
+    position: absolute;
+    width: 10px;
+    height: 40vh;
+    margin: auto;
+    transform: rotate(-180deg);
+    top: 0;left: 36px;bottom: 0;
+}
+
+.loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(18, 20, 45);
+    top: 0;left: 0;
+    z-index: 9999;
+}
+
+.loader h1 {
+    height: fit-content;
+    width: fit-content;
+    color: rgb(255, 0, 0);
+    margin: auto;
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;margin:auto;
+    font-family: "Tesla", "Montserrat", sans-serif;
+    font-size: 38px;
+    text-align: center;
+}
+
+.loader span {
+    position: absolute;
+    margin: auto;
+    bottom: 15px;
+    left: 0;right: 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+.loading-bar {
+    width: 2px;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    background: #f00;
+    transform: scaleY(0);
+}
+
+.loading-bar.bar1 {
+    left: 5%;
+    transform-origin: top left;
+}
+.loading-bar.bar2 {
+    right: 5%;
+    transform-origin: bottom right;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadster</title>
+</head>
+<body>
+    <div class="info-icon">
+        <img src="https://pics.freeicons.io/uploads/icons/png/17522985921543238896-512.png" />
+    </div>
+    <div class="info">
+        <h1>Controls</h1>
+        <ul>
+            <li>Use <b>W,A,S,D</b> or <b>Arrow Keys</b> or the <b>Joystick</b> in the right bottom corner to control car.</li>
+            <li>Press <b>R</b> in case the car flips over or is stuck. In some cases you might need to refresh the page.</li>
+            <li>Press <b>Space Bar</b> to brake.</li>
+            <li>Change colors by clicking on them on the color palette.</li>
+            <li>Drag to orbit around the car and scroll to zoom.</li>
+        </ul>
+        <b><u>Exit</u></b>
+    </div>
+    <input type="range" class="zoom-slider" min="10" max="40" value="40" step="1.5">
+    <div class="colors">
+        <div class="color selected white" data-color="white"></div>
+        <div class="color red" data-color="red"></div>
+        <div class="color blue" data-color="blue"></div>
+        <div class="color grey" data-color="grey"></div>
+        <div class="color black" data-color="black"></div>
+    </div>
+    <div class="loader">
+        <h1>TESLA ROADSTER</h1>
+        <span>0% Loading...</span>
+        <div class="loading-bar bar1"></div>
+        <div class="loading-bar bar2"></div>
+    </div>
+    <script
+        data-href="https://github.com/Jaagrav/Roadster"
+        src="https://unpkg.com/github-corners/dist/embed.min.js"
+    ></script>
+</body>
+</html>
